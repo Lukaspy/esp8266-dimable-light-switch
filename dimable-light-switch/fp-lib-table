@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name SOT428)(type KiCad)(uri "$(KIPRJMOD)/SOT428.pretty")(options "")(descr ""))
+)
