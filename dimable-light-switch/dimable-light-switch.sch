@@ -70,17 +70,6 @@ F 3 "" H 6850 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L IRM-01-3.3 PS1
-U 1 1 5A9A2623
-P 2225 1500
-F 0 "PS1" H 2400 1300 60  0000 C CNN
-F 1 "IRM-01-3.3" H 2225 1700 60  0000 C CNN
-F 2 "" H 2075 1500 60  0001 C CNN
-F 3 "" H 2075 1500 60  0001 C CNN
-	1    2225 1500
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR02
 U 1 1 5A9A27D2
 P 2800 1725
@@ -108,7 +97,7 @@ U 1 1 5A9A3C3B
 P 4025 5400
 F 0 "J2" H 4025 5500 50  0000 C CNN
 F 1 "Screw_Terminal" H 4025 5200 50  0000 C CNN
-F 2 "" H 4025 5400 50  0001 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_PT-3.5mm_2pol" H 4025 5400 50  0001 C CNN
 F 3 "" H 4025 5400 50  0001 C CNN
 	1    4025 5400
 	1    0    0    -1  
@@ -285,22 +274,14 @@ $EndComp
 $Comp
 L Screw_Terminal_01x02 J1
 U 1 1 5A9A7222
-P 1200 1550
-F 0 "J1" H 1200 1650 50  0000 C CNN
-F 1 "Screw_Terminal" H 1200 1350 50  0000 C CNN
-F 2 "" H 1200 1550 50  0001 C CNN
-F 3 "" H 1200 1550 50  0001 C CNN
-	1    1200 1550
-	-1   0    0    1   
+P 1575 1850
+F 0 "J1" H 1575 1950 50  0000 C CNN
+F 1 "Screw_Terminal" H 1575 1650 50  0000 C CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_PT-3.5mm_2pol" H 1575 1850 50  0001 C CNN
+F 3 "" H 1575 1850 50  0001 C CNN
+	1    1575 1850
+	0    1    1    0   
 $EndComp
-Text Label 1550 1425 0    60   ~ 0
-Live
-Text Label 1550 1575 0    60   ~ 0
-Neut
-Text Label 3600 5500 0    60   ~ 0
-Neut
-Text Label 3425 5300 0    60   ~ 0
-Live
 Text Notes 3950 5225 0    60   ~ 0
 Load
 Text Notes 1000 1275 0    60   ~ 0
@@ -367,18 +348,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 4150 7850 4225
 Connection ~ 7850 4225
-Wire Wire Line
-	1400 1450 1500 1450
-Wire Wire Line
-	1500 1450 1500 1425
-Wire Wire Line
-	1500 1425 1775 1425
-Wire Wire Line
-	1775 1575 1500 1575
-Wire Wire Line
-	1500 1575 1500 1550
-Wire Wire Line
-	1500 1550 1400 1550
 Wire Wire Line
 	7625 2950 7975 2950
 Wire Wire Line
@@ -459,4 +428,36 @@ Wire Wire Line
 	5350 4125 5550 4125
 Wire Wire Line
 	5550 4125 5550 3600
+$Comp
+L BTA204S D1
+U 1 1 5A9AEBB1
+P 3150 5450
+F 0 "D1" H 3275 5475 50  0000 L CNN
+F 1 "BTA204S" H 3275 5400 50  0000 L CNN
+F 2 "SOT428:SOT428" V 3225 5475 50  0001 C CNN
+F 3 "" V 3150 5450 50  0001 C CNN
+	1    3150 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L IRM-01-3.3 PS1
+U 1 1 5A9AF049
+P 2225 1500
+F 0 "PS1" H 2400 1300 60  0000 C CNN
+F 1 "IRM-01-3.3" H 2225 1700 60  0000 C CNN
+F 2 "SOT428:IRM-01-3.3" H 2075 1500 60  0001 C CNN
+F 3 "" H 2075 1500 60  0001 C CNN
+	1    2225 1500
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 5725 0    60   ~ 0
+1935161
+Wire Wire Line
+	1775 1575 1475 1575
+Wire Wire Line
+	1475 1575 1475 1650
+Wire Wire Line
+	1775 1425 1575 1425
+Wire Wire Line
+	1575 1425 1575 1650
 $EndSCHEMATC
